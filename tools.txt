@@ -1,0 +1,187 @@
+Mailgun account:
+
+robot@biyaheroes.com
+Biyaher0es
+
+Mailgun API:
+API key: key-0d86bc89f0a0dfbd5d16ec092c0c83f9
+API Base URL:https://api.mailgun.net/v3/biyaheroes.com
+
+var mailgun = require( "mailgun-js/lib/mailgun" )({apiKey: MAILGUN_API_TOKEN, domain: MAILGUN_DOMAIN});
+
+var message = { 
+  to: 'jlm@biyaheroes.com',
+  from: 'sidekicks@biyaheroes.com',
+  subject: 'Test email subject',
+  text: 'Test email text' 
+};
+
+mailgun.messages().send(message, function (error, result) {
+  console.log(error);
+  console.log(result);
+});
+
+
+Mailchimp account:
+
+Username: robotbiyaheroes
+Password: Biy@her0es
+Mandrill API key: Vs3OXdp8dNSZmrl422GZNQ
+
+
+Database backup:
+
+mongodump --host ec2-52-74-187-10.ap-southeast-1.compute.amazonaws.com --port 3210 --out ~/biyaheroes-backup/biyaheroes-2016-05-25
+
+
+
+mongod --fork --logpath ~/biyaheroes-db/.db.log --port 3001 --dbpath ~/biyaheroes-db/
+
+git clone github url with .git file extension
+
+git clone 
+git checkout branch_name
+
+git pull https://github.com/johnlenonmaghanoy/test.git test/feature/sms-engine
+
+git checkout test/feature/revised-email-service
+
+git pull github url with .git branch_name
+
+tmux a -t bhblog
+use `robot@biyaheroes.com` as username and `Biyaher0es`
+
+tmux new -s nginx2
+
+tmux a -t nginx2
+
+git checkout test/feature/incoming-url
+
+git checkout test/feature/email-microservice
+
+git clone https://github.com/johnlenonmaghanoy/test.git
+
+git pull https://github.com/johnlenonmaghanoy/test.git test/feature/incoming-url
+git pull https://github.com/johnlenonmaghanoy/service.git test/feature/incoming-url
+
+git pull https://github.com/johnlenonmaghanoy/test.git test/feature/email-microservice
+
+git pull https://github.com/johnlenonmaghanoy/test.git test/feature/email-microservice
+
+git pull https://github.com/johnlenonmaghanoy/test.git test/feature/revised-email-service
+
+
+
+npm install -g
+npm install package_name --save
+
+npm install harden --save
+
+mkdir folder_name
+mkdir test
+
+
+touch filename
+
+
+sudo rm -r -f /path/
+
+sudo rm -r -f test
+
+sudo nano /etc/nginx/sites-available/default
+
+jasmine-node spec/api/mytests_spec.js
+
+
+
+Sun Cellular Message Cast pro number: +639221000227
+
+
+https://biyaheroes.signin.aws.amazon.com/console
+ec2-52-76-134-115.ap-southeast-1.compute.amazonaws.com
+Account: biyaheroes
+User: jlm
+Pass: Biyaher0es
+
+ec2-52-76-22-131.ap-southeast-1.compute.amazonaws.com
+
+ssh -i biyaheroes.pem ubuntu@ec2-52-76-134-115.ap-southeast-1.compute.amazonaws.com
+
+
+ssh -i biyaheroes.pem ubuntu@ec2-52-76-134-115.ap-southeast-1.compute.amazonaws.com
+
+ssh -i biyaheroes.pem ubuntu@ec2-52-74	-115.ap-southeast-1.compute.amazonaws.com
+
+
+ssh -i biyaheroes.pem ubuntu@ec2-52-76-134-115.ap-southeast-1.compute.amazonaws.com
+
+
+Biyaheroes Public DNS:
+
+ssh -i <path to pem file> ubuntu@<PUBLIC_DNS>
+
+Example:
+ssh -i biyaheroes.pem ubuntu@ec2-52-74-230-240.ap-southeast-1.compute.amazonaws.com
+
+
+blog:
+ssh -i biyaheroes.pem ubuntu@ec2-52-74-230-240.ap-southeast-1.compute.amazonaws.com
+
+service-biyaheroes:
+ssh -i biyaheroes.pem ubuntu@ec2-52-76-134-115.ap-southeast-1.compute.amazonaws.com
+
+site-biyaheroes:
+ssh -i biyaheroes.pem ubuntu@ec2-52-76-22-131.ap-southeast-1.compute.amazonaws.com
+
+
+
+server {
+    listen 80;
+    server_name service.biyaheroes.com;
+
+    access_log /home/ubuntu/logs/access.log;
+    error_log /home/ubuntu/logs/error.log;
+
+    location / {
+        proxy_pass http://127.0.0.1:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-NginX-Proxy true;
+        proxy_read_timeout 5m;
+        proxy_redirect off;
+    }
+}
+
+
+
+
+server {
+    listen 80;
+    server_name test.biyaheroes.com;
+
+    access_log /home/ubuntu/logs/access.log;
+    error_log /home/ubuntu/logs/error.log;
+
+    location / {
+        proxy_pass http://127.0.0.1:3001;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-NginX-Proxy true;
+        proxy_read_timeout 5m;
+        proxy_redirect off;
+    }
+}
+
+
+
+
+
